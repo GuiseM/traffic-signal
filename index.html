@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Signal</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/dc49a974a4.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800&family=Sen:wght@700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Nunito&family=Poppins:wght@200;300;500;700;800&family=Sen:wght@700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio src="./ambient.mp3" id="musicCar" type="audio/mpeg"></audio>
+    <audio src="./ambientBirds.mp3" id="musicBird" type="audio/mpeg"></audio>
+    <audio src="./piscaSound.mp3" id="piscaSound" type="audio/mpeg"></audio>
+
+    <main class="container" id="container">
+
+        <button class="pressStart" id="button">
+            <i class="fa-solid fa-hand"></i>
+            <h1>STOP</h1>
+        </button>
+        <div class="pillarRight"></div>
+
+        <div class="container-sinalCar">
+            <div class="sinal stop" id="close"></div>
+            <div class="sinal alert" id="alert"></div>
+            <div class="sinal go" id="open"></div>
+
+        </div>
+
+        <div class="container-sinalPe">
+            <div class="sinalPe stopPe" id="closedPe">
+                <i class="fa-solid fa-person" id="ClosedfigurePe"></i>
+            </div>
+            <div class="sinalPe goPe" id="openPe">
+                <i class="fa-solid fa-person" id="OpenfigurePe"></i>
+            </div>
+
+        </div>
+        <div class="pillar"></div>
+        <div class="user" id="warning">
+            <p class="warning">For a better experience, click in the headphones to allow sounds =)</p>
+            <i class="fa-solid fa-headphones" id="clickAccept"></i>
+        </div>
+    </main>
+
+    <footer id="copyright">
+        <p>&copy; Traffic Signal, Cauê Guise Mondek, <span id="ano"></span></p>
+    </footer>
+    
+    <script>
+        const year = document.querySelector('#ano');
+        ano.innerHTML = new Date().getFullYear();
+    </script>
+    
+    <script src="./js/app.js"></script>
+</body>
+</html>
